@@ -12,4 +12,7 @@ Each layer of the deployment should be decoupled in a way allowing for updating 
 ### Microservices Terraform 
 Inside the infrastructure repostory there will be a directory containing the terraform resources for deploying and managing the Pilot microservices in the form of Helm Charts.
 
+To ensure we have a stable target to record terraform state, regadless of what infrastructure Pilot is deployed to, we store the terraform state of the services directly in Kubernetes.
+
 ![](./tf_ms_diagram.png)
+
