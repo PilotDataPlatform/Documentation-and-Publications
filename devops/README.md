@@ -16,3 +16,4 @@ To ensure we have a stable target to record terraform state, regadless of what i
 
 ![](./tf_ms_diagram.png)
 
+If a CI/CD tool running within the Kubernetes cluster is used to run the terraform, a kube config file will not be necessary, and appropriate cluster roles can be setup such that the running terraform pod gets its config from the environment. 
