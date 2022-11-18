@@ -17,3 +17,9 @@ To ensure we have a stable target to record terraform state, regadless of what i
 ![](./tf_ms_diagram.png)
 
 If a CI/CD tool running within the Kubernetes cluster is used to run the terraform, a kube config file will not be necessary, and appropriate cluster roles can be setup such that the running terraform pod gets its config from the environment. 
+
+Where possible, the directory containing the microservice terraform should include a `run.sh` to ease in both running the terraform manually, and to aid in automation. The script should be able to be invoked as follows:
+```bash
+./run.sh <env_name> 
+# where env_name describes the environment if using terraform to manage a multi-environment deployment (dev/qa/staging/prod as an example)
+```
